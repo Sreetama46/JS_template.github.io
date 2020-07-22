@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sign Up Form</title>
+  <style>
+    body{
+  background-color: #d3e8f1;
+}
+h1 {
+  text-align: center;
+  font-size: 50px;
+  color: steelblue;
+}
+
+form {
+  margin: 20px auto;
+  width: 320px;
+  color: steelblue;
+}
+
+.input{
+  padding: 10px;
+  font-size: inherit;
+}
+
+input[type="text"]{
+  display: block;
+  margin-bottom: 25px;
+  width: 100%;
+  border: 2px-solid steelblue;
+  background: #FAF6D9;  
+}
+input[type="password"]{
+  display: block;
+  margin-bottom: 25px;
+  width: 100%;
+  border: 2px-solid steelblue; 
+  background: #FAF6D9;
+}
+input[type="date"]{
+  display: block;
+  margin-bottom: 25px;
+  width: 100%;
+  border: 2px-solid steelblue; 
+  background: #FAF6D9;
+}
+input[type="email"]{
+  display: block;
+  margin-bottom: 25px;
+  width: 100%;
+  border: 2px-solid steelblue;
+  background: #FAF6D9; 
+}
+input[type="tel"]{
+  display: block;
+  margin-bottom: 25px;
+  width: 100%;
+  border: 2px-solid steelblue; 
+  background: #FAF6D9; 
+}
+input[type="submit"]{
+  width: 344px;
+  height: 45px;
+  border: none;
+  background: steelblue; 
+  color: white;
+}
+input:focus {
+  background: white; 
+  border: 3px solid rgb(202, 200, 200);
+}
+
+  </style>
+</head>
+<body>
+  
+<div class="Reg_Form">
+  <h1>Registration</h1>
+  <form class="form">
+    <input type="text" placeholder="First Name" class="input" id="fname" >
+    <input type="text" placeholder="Last Name" class="input">
+    <label>Date Of Birth</label>
+    <input type="date" class="input">
+    <input placeholder="email@example.com" type="email" class="input">
+    <input  type="tel" placeholder="Mobile Number" class="input">
+    <input type="password" placeholder="Password" class="input" id="password" onchange='check_pass();'/>
+    <input type="password" class="input" placeholder="Confirm_Password" id="confirm_password" onchange='check_pass();'/>
+    <input type="submit" name="submit" class="input" value="Register"  id="submit" disabled/>
+
+  </form>
+
+</div>
+    <script>
+      function check_pass() {
+    if (document.getElementById('password').value ==
+            document.getElementById('confirm_password').value) {
+        document.getElementById('submit').disabled = false;
+    } else {
+        document.getElementById('submit').disabled = true;
+    }
+}
+  </script>
+  
+</body>
+</html>
